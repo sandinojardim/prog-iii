@@ -12,6 +12,8 @@ public class FlowLayoutExample {
         jfrm.setSize(300, 100);
         jfrm.add(new JButton("Button 1"));
         jfrm.add(new JButton("Button 2"));
+        jfrm.add(new JButton("Button 3"));
+        jfrm.add(new JButton("Button 4"));
         jfrm.setVisible(true);
 
     }

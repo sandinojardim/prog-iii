@@ -2,11 +2,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 import java.awt.FlowLayout;
+import javax.swing.UIManager;
 
 public class LookAndFeelExample {
     public LookAndFeelExample() {
         try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
         } catch (Exception e) {
             System.out.println("Error setting Nimbus LAF: " + e);
         }

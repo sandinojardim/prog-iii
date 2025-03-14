@@ -41,6 +41,11 @@ public class ToDoListApp extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO: Adicionar tarefa ao listModel
+                String task = taskField.getText();
+                if (!task.isEmpty()) {
+                    listModel.addElement(task);
+                    taskField.setText("");
+                }
             }
         });
 
@@ -48,6 +53,7 @@ public class ToDoListApp extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO: Marcar tarefa como concluída
+                listModel.setElementAt("[Concluída] " + listModel.getElementAt(taskList.getSelectedIndex()), taskList.getSelectedIndex());
             }
         });
 
@@ -55,6 +61,7 @@ public class ToDoListApp extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO: Remover tarefa selecionada
+                listModel.remove(taskList.getSelectedIndex());
             }
         });
 

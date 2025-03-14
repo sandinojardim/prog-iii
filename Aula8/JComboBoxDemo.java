@@ -5,7 +5,7 @@ import javax.swing.*;
    
 public class JComboBoxDemo { 
   
-  String timepieces[] = { "Hourglass", "Analog", "Digital", "Stopwatch" }; 
+  String timepieces[] = { "locate", "analog", "digital", "stopwatch" }; 
  
   public JComboBoxDemo() { 
  
@@ -26,7 +26,7 @@ public class JComboBoxDemo {
     //jcb.removeAllItems();
  
     // Create a label and add it to the content pane. 
-    JLabel jlab = new JLabel(new ImageIcon("hourglass.png")); 
+    JLabel jlab = new JLabel(new ImageIcon("locate.png")); 
     jfrm.add(jlab); 
 
     // Handle selections. 

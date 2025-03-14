@@ -53,11 +53,11 @@ public class JButtonDemo implements ActionListener {
 
     public static void main(String[] args) {
         // Create the frame on the event dispatching thread.
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-            e.printStackTrace();
-        }
+        // try {
+        //     UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        // } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
+        //     e.printStackTrace();
+        // }
         SwingUtilities.invokeLater(
             new Runnable() {
                 public void run() {
