@@ -1,0 +1,38 @@
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class StyledJavaFX extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+        Label label = new Label("Digite seu nome:");
+        TextField nomeField = new TextField();
+        Button botao = new Button("Dizer Olá");
+        Label resultado = new Label();
+
+        botao.setOnAction(event -> {
+            String nome = nomeField.getText();
+            resultado.setText("Olá, " + (nome.isEmpty() ? "Mundo" : nome) + "!");
+        });
+
+        // Estilização
+        botao.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white;");
+        resultado.setStyle("-fx-font-size: 16px; -fx-text-fill: blue;");
+
+        VBox layout = new VBox(10);
+        layout.getChildren().addAll(label, nomeField, botao, resultado);
+
+        Scene scene = new Scene(layout, 300, 200);
+        primaryStage.setTitle("JavaFX com Estilo");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
